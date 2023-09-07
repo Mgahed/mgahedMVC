@@ -1,0 +1,13 @@
+{
+    "name": "mgahed/mgahed-mvc",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "MgahedMvc\\": "src/"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "symfony/var-dumper": "^5.4"
+    }
+}
