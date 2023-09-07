@@ -13,16 +13,7 @@ app()->run();
 /**
  * @description This is a test for the validator
  */
-$validator = new \MgahedMvc\Validation\Validator();
-//$validator->setRules([
-//    'username' => ['required', 'alnum', 'between:3,6'],
-//    'password' => 'required|alnum|min:6',
-//    'email' => 'required|email'
-//]);
-//$validator->setAliases([
-//    'username' => 'Usernamezz',
-//    'password' => 'Passwordzz'
-//]);
+/*$validator = new \MgahedMvc\Validation\Validator();
 $data = [
     'username' => '**',
     'password' => '12345',
@@ -33,5 +24,5 @@ $validator->make($data,[
     'password' => 'required|alnum|min:6',
     'email' => 'required|email'
 ]);
-dump($validator->errors());
+dump($validator->errors());*/
 //dump(config('database.username'));

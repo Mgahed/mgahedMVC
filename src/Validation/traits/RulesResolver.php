@@ -9,6 +9,9 @@ trait RulesResolver
         if (is_string($rules) && str_contains($rules, '|')) {
             $rules = explode('|', $rules);
         }
+        if (!is_array($rules)) {
+            $rules = [$rules];
+        }
         return array_map(function ($rule) {
             if (is_string($rule)) {
                 return static::getRuleFromString($rule);
