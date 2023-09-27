@@ -14,7 +14,7 @@ composer install
 cat .env.example > .env
 ```
 
-7. Start the application:
+4. Start the application:
 
 ```
 php -S localhost:8000 -t public
