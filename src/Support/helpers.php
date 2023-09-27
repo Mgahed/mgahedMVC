@@ -1,6 +1,7 @@
 <?php
 
 use MgahedMvc\Application;
+use MgahedMvc\Support\Hash;
 use MgahedMvc\View\View;
 
 if (!function_exists('env')) {
@@ -10,11 +11,26 @@ if (!function_exists('env')) {
     }
 }
 
+if (!function_exists('bcrypt')) {
+    function bcrypt($value)
+    {
+        return Hash::make($value);
+    }
+}
+
 // config
 if (!function_exists('config')) {
     function config($key, $default = null)
     {
         return app()->config->get($key, $default);
+    }
+}
+
+if (!function_exists('class_basename')) {
+    function class_basename($class)
+    {
+        $class = is_object($class) ? get_class($class) : $class;
+        return basename(str_replace('\\', '/', $class));
     }
 }
 

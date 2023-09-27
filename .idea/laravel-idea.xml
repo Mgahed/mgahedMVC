@@ -11,5 +11,6 @@
         </option>
       </LaravelCodeGeneration>
     </option>
+    <option name="userClassName" value="\AppModels\User" />
   </component>
 </project>
