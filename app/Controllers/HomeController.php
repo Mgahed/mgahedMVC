@@ -8,6 +8,7 @@ class HomeController
 {
     public function index()
     {
+        return (new ProductController())->all();
         $validator = new Validator();
         $request = new Request;
         $validator->make($request->all(),[

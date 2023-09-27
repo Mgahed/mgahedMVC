@@ -81,3 +81,22 @@ if (!function_exists('view'))
         return View::make($view, $params);
     }
 }
+
+if (!function_exists('responseJson'))
+{
+    function responseJson($data, $code = 200)
+    {
+        http_response_code($code);
+        header('Content-Type: application/json');
+        echo json_encode($data);
+        exit;
+    }
+}
+
+// camelCase to snake_case
+if (!function_exists('camelToSnake')) {
+    function camelToSnake($input)
+    {
+        return strtolower(preg_replace('/(?<!^)[A-Z]/', '_$0', $input));
+    }
+}
