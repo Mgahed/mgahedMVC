@@ -18,4 +18,21 @@ class Request
     {
         return array_merge($_GET, $_POST);
     }
+
+    public function get($key)
+    {
+        return $_GET[$key] ?? null;
+    }
+
+    // add new value to $_GET
+    public function addValue($key, $value)
+    {
+        $_GET[$key] = $value;
+    }
+
+    // update value in $_GET
+    public function updateValue($key, $value)
+    {
+        $_GET[$key] = $value;
+    }
 }

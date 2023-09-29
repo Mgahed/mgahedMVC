@@ -7,6 +7,8 @@ use MgahedMvc\Validation\Rules\BetweenRule;
 use MgahedMvc\Validation\Rules\EmailRule;
 use MgahedMvc\Validation\Rules\MaxRule;
 use MgahedMvc\Validation\Rules\MinRule;
+use MgahedMvc\Validation\Rules\MinValueRule;
+use MgahedMvc\Validation\Rules\NumericRule;
 use MgahedMvc\Validation\Rules\RequiredRule;
 use MgahedMvc\Validation\Rules\UniqueRule;
 
@@ -20,6 +22,8 @@ trait RulesMapper
         'between' => BetweenRule::class,
         'email' => EmailRule::class,
         'unique' => UniqueRule::class,
+        'numeric' => NumericRule::class,
+        'min_value' => MinValueRule::class,
     ];
 
     public static function resolve($rule, $options = [])

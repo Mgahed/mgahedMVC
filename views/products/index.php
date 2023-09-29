@@ -8,7 +8,7 @@
 <div class="row mt-3">
     <?php foreach ($products as $product): ?>
         <div class="col-md-3 mb-4">
-            <div class="card" style="width: 18rem;">
+            <div class="card w-100">
                 <div class="card-body">
                     <input class="form-check-input mt-0 delete-checkbox" type="checkbox" value="<?= $product['id'] ?>"
                            aria-label="Checkbox for following text input">
